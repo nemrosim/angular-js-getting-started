@@ -7,14 +7,11 @@
     <script src="script.js"></script>
 </head>
 <body>
-<div ng-controller="MyController">
-    <label>Name:</label>
-    <input type="text" ng-model="yourName" placeholder="Enter a name here">
-    <hr>
-    <div>Hello <b>{{yourName}}</b> !</div>
-    <div>Directive: <b>{{ 345 / 123}}</b></div>
-    <div>Message: <b>{{message}}</b></div>
-    <div>UserID: <b>{{user.id}}</b></div>
-</div>
+<ng-include src="'./fragments/myControllerFragment.html'" ng-if="shouldBeVisible">
+</ng-include>
+
+<div class="ng-include: './fragments/formControllerFragment.html';"></div>
+
+<div ng-include="'./fragments/userControllerFragment.html'"></div>
 </body>
 </html>
