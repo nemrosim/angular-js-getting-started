@@ -32,7 +32,7 @@ var PreviousController = function ($scope, apiService) {
     }
 }
 
-var MainController = function ($scope, apiService) {
+var MainController = function () {
     alert("Main controller loaded")
 }
 
