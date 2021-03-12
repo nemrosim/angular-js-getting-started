@@ -2,16 +2,20 @@
 <html lang="en" ng-app="MyModule">
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.js"></script>
     <meta charset="UTF-8">
     <title>AngularJS. Simplest example</title>
-    <script src="script.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers.js"></script>
+    <script src="scripts/apiService.js"></script>
 </head>
 <body>
-<ng-include src="'./fragments/myControllerFragment.html'" ng-if="shouldBeVisible">
-</ng-include>
-
-<div class="ng-include: './fragments/formControllerFragment.html';"></div>
-
-<div ng-include="'./fragments/userControllerFragment.html'"></div>
+<div ng-view></div>
+<!--<ng-include-->
+<!--        src="'./fragments/myControllerFragment.html'"-->
+<!--        >-->
+<!--</ng-include>-->
+<!--<div class="ng-include: './fragments/formControllerFragment.html';"></div>-->
+<!--<div ng-include="'./fragments/userControllerFragment.html'"></div>-->
 </body>
 </html>
